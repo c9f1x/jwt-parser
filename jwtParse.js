@@ -23,7 +23,7 @@ if (params.token) {
 
 function atob(s) {
     try {
-        return new Buffer(s, 'base64').toString('binary');
+        return new Buffer.from(s, 'base64').toString('binary');
     } catch (e) {
         return s;
     }
